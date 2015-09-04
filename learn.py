@@ -2,8 +2,7 @@ import pandas as pd
 import numpy as np
 from sklearn.cross_validation import KFold, train_test_split
 from sklearn import metrics
-from sklearn.ensemble import RandomForestRegressor, ExtraTreesRegressor, GradientBoostingRegressor
-from sklearn.linear_model import RidgeCV, LogisticRegressionCV, LogisticRegression, Ridge, LassoCV
+from sklearn.linear_model import LassoCV
 from datetime import datetime
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
 import xgboost as xgb
@@ -11,7 +10,7 @@ from gini_score import *
 from sklearn.externals import joblib
 from xgbex import PropertyInspectionXGBRegressor
 
-# This solution based on:
+# This solution is based on:
 # "Bench-Stacked-Generalization" (https://www.kaggle.com/justfor/liberty-mutual-group-property-inspection-prediction/bench-stacked-generalization)
 # with ideas taken from
 # "Blah-XGB" (https://www.kaggle.com/soutik/liberty-mutual-group-property-inspection-prediction/blah-xgb)

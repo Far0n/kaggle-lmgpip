@@ -78,7 +78,7 @@ class PropertyInspectionXGBRegressor(xgb.XGBRegressor):
         else:
             _eval_metric = xgb_feval_gini
 
-        super(xgb.XGBRegressor, self).fit(X, y, eval_set=eval_set, eval_metric=xgb_feval_gini,
+        super(xgb.XGBRegressor, self).fit(X, y, eval_set=eval_set, eval_metric=_eval_metric,
                                            early_stopping_rounds=self.early_stopping_rounds, verbose=0)
 
         return self
